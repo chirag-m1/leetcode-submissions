@@ -34,12 +34,11 @@ class Solution {
 
     public int countNodes(TreeNode root) {
         if(root == null) return 0;
-        
+
         int lh = findLeftHeight(root);
         int rh = findRightHeight(root);
         
         if(lh == rh) {
-            System.out.println("lh "+ lh);
             return (2<<lh) - 1;
         }
         return 1 + countNodes(root.left) + countNodes(root.right);
