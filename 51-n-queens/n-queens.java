@@ -30,6 +30,7 @@ class Solution {
                 temp.add(sb.toString());
             }
             boards.add(temp);
+            return;
         }
         for(int col = 0; col < n; col++) {
                 if(isSafe(row, col, n, board)) {
